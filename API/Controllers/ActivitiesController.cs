@@ -1,5 +1,6 @@
 ﻿using Domain;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Persistence;
 
 namespace API.Controllers
@@ -16,7 +17,7 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Activity>>> GetActivities()
         {
-            return _context.Activities.ToList();
+            return await _context.Activities.ToListAsync();
         }
 
         [HttpGet("{id}")]
