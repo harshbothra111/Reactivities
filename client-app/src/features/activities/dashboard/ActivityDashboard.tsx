@@ -15,7 +15,7 @@ interface Props{
     closeForm: () => void;
 }
 
-export default function ActivityDashboard({activities, selectedActivity, selectActivity: selectActivity,
+export default function ActivityDashboard({activities, selectedActivity, selectActivity,
      cancelSelectedActivity, editMode, openForm, closeForm}: Props) {
     return (
         <Grid>
